@@ -2,4 +2,4 @@
 export BUILD_LIB=$1
 
 cd $(dirname "$0")
-gmake
+/QOpenSys/pkgs/bin/gmake 

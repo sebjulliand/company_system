@@ -10,7 +10,7 @@ employees.pgm.sqlrpgle: emps.dspf employee.table
 ## Rules
 %.pgm.sqlrpgle: qrpglesrc/%.pgm.sqlrpgle
 	system -s "CHGATR OBJ('$<') ATR(*CCSID) VALUE(1252)"
-	liblist -a $(LIBLIST);\
+	liblist -a $(LIBRARY_LIST);\
 	system "CRTSQLRPGI OBJ($(BUILD_LIB)/$*) SRCSTMF('$<') COMMIT(*NONE) DBGVIEW(*SOURCE) OPTION(*EVENTF) COMPILEOPT('INCDIR(''qrpgleref'')')"
 
 %.dspf:
