@@ -17,6 +17,7 @@ employees.pgm.sqlrpgle: emps.dspf employee.table
 	-system -qi "CRTSRCPF FILE($(BUILD_LIB)/QDDSSRC) RCDLEN(112)"
 	system "CPYFRMSTMF FROMSTMF('./qddssrc/$*.dspf') TOMBR('/QSYS.lib/$(BUILD_LIB).lib/QDDSSRC.file/$*.mbr') MBROPT(*REPLACE)"
 	system -s "CRTDSPF FILE($(BUILD_LIB)/$*) SRCFILE($(BUILD_LIB)/QDDSSRC) SRCMBR($*)"
+	system -qi "DLTF FILE($(BUILD_LIB)/QDDSSRC)"
 
 %.table: qsqlsrc/%.table
 	liblist -c $(BUILD_LIB);\
