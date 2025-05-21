@@ -9,8 +9,8 @@
     ]
   },
   {
-    "name": "Build and deploy with make 🔨",
-    "command": "/QOpenSys/pkgs/bin/gmake BIN_LIB=&CURLIB OPT=*EVENTF",
+    "name": "Build with make 🔨",
+    "command": "/QOpenSys/pkgs/bin/gmake BUILD_LIB=${library|Build library|&CURLIB} OPT=*EVENTF",
     "environment": "pase",
     "deployFirst": true,
     "extensions": [
@@ -18,8 +18,8 @@
     ]
   },
   {
-    "name": "Build and deploy current with make 🔨",
-    "command": "/QOpenSys/pkgs/bin/gmake &BASENAME BIN_LIB=&CURLIB OPT=*EVENTF",
+    "name": "Build in current library with make 🔨",
+    "command": "/QOpenSys/pkgs/bin/gmake BUILD_LIB=&CURLIB OPT=*EVENTF",
     "environment": "pase",
     "deployFirst": true,
     "extensions": [
